@@ -17,6 +17,7 @@ Feature: To test and end point of the application
     And match header Connection == "keep-alive"
     #validate the size of array
     And match response.[0].jobId == 1
+    And match response.[0].experience[0] == 'Google'
     And match response.[0].experience[1] == 'Apple'
     And match response.[0].project[0].projectName == 'Movie App'
     And match response.[0].project[0].technology[2] == 'Gradle'
